@@ -38,6 +38,10 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+test {
+    useJUnitPlatform() // This tells Gradle to use the JUnit 5 engine
+}
+
 tasks.named('jar') {
     enabled = false
 }
