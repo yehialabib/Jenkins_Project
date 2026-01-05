@@ -1,11 +1,12 @@
 def buildApp() {
     echo "Building application..."
-    sh 'gradle clean build -x test --no-daemon'
+    sh 'chmod +x gradlew'
+    sh './gradlew clean build -x test --no-daemon'
 }
 
 def testApp() {
     echo "Running unit tests..."
-    sh 'gradle test'
+    sh './gradlew test'
 }
 
 def pushToDockerHub(String imageName, String credentialsId) {
