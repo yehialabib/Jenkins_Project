@@ -13,7 +13,7 @@ pipeline {
         
         // Use 'localhost:8082' if Jenkins and Nexus are in the same network
         // or the specific Codespaces URL/IP for port 8082
-        NEXUS_URL = "localhost:8082" 
+        NEXUS_URL = "172.17.0.1:8082"
         
         // Dynamic tagging for multiple branches (e.g., main-1, dev-3)
         IMAGE_TAG = "${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
