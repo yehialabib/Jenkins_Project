@@ -1,6 +1,6 @@
 # Stage 1: Build stage
 # We use the Gradle image with JDK 17 to compile the code
-FROM gradle:9.4-jdk17 AS build
+FROM gradle:8.5-jdk17 AS build
 WORKDIR /app
 # Copy the project files into the container
 COPY . .
